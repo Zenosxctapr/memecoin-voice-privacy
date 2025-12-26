@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Memecoin Voice Chat</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.8;
+      color: #333;
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 { 
+      color: #66E0E3;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    h2 { 
+      color: #0E0E0E;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      font-size: 24px;
+      border-bottom: 2px solid #66E0E3;
+      padding-bottom: 10px;
+    }
+    .updated {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin: 10px 0;
+    }
+    strong {
+      color: #0E0E0E;
+    }
+    .contact {
+      background: #f0f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #66E0E3;
+      margin-top: 40px;
+    }
+    a {
+      color: #66E0E3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <div class="updated"><strong>Last updated:</strong> December 27, 2024</div>
+
+    <h2>1. Introduction</h2>
+    <p>Memecoin Voice Chat ("we," "our," or "the extension") is a Chrome browser extension that enables real-time voice communication between users viewing the same cryptocurrency token. We are committed to protecting your privacy and being transparent about our data practices.</p>
+
+    <h2>2. Information We DO NOT Collect</h2>
+    <p>We want to be crystal clear: <strong>we do not collect, store, or share any personal information.</strong> Specifically:</p>
+    <ul>
+      <li>We do NOT collect your name, email address, or any identifying information</li>
+      <li>We do NOT track your browsing history or activity</li>
+      <li>We do NOT log your voice conversations</li>
+      <li>We do NOT record or store any audio</li>
+      <li>We do NOT use cookies or analytics</li>
+      <li>We do NOT sell or share any data with third parties</li>
+    </ul>
+
+    <h2>3. How the Extension Works</h2>
+    <p>Our extension operates on a peer-to-peer basis:</p>
+    <ul>
+      <li><strong>Random Username Generation:</strong> When you join, a random username like "Trader 1234" is generated locally in your browser. This is never stored on our servers.</li>
+      <li><strong>Token Detection:</strong> The extension detects which cryptocurrency token page you're viewing by reading the URL. This information stays in your browser.</li>
+      <li><strong>Peer-to-Peer Voice:</strong> Voice communication happens directly between users using WebRTC technology. Audio never passes through our servers.</li>
+      <li><strong>Signaling Server:</strong> Our server only facilitates the initial connection setup between users. Once connected, users communicate directly.</li>
+    </ul>
+
+    <h2>4. Microphone Access</h2>
+    <p>The extension requests microphone access only when you explicitly click "Join Voice Chat." Your microphone is used solely for real-time voice communication and is controlled by you at all times:</p>
+    <ul>
+      <li>You can choose "Always On" or "Push-to-Talk" mode</li>
+      <li>You can leave the chat at any time</li>
+      <li>No audio is ever recorded or stored</li>
+      <li>You can revoke microphone permissions in Chrome settings</li>
+    </ul>
+
+    <h2>5. Temporary Server Data</h2>
+    <p>Our signaling server temporarily stores minimal data to facilitate connections:</p>
+    <ul>
+      <li><strong>Random User ID:</strong> A randomly generated identifier (e.g., "user_abc123") used only for the duration of your chat session</li>
+      <li><strong>Token Address:</strong> The cryptocurrency token you're viewing, used to match you with other users viewing the same token</li>
+      <li><strong>WebSocket Connection:</strong> A temporary network connection that exists only while you're in the chat</li>
+    </ul>
+    <p><strong>All of this data is deleted immediately when you leave the chat or close your browser.</strong></p>
+
+    <h2>6. Third-Party Services</h2>
+    <p>We use the following third-party infrastructure:</p>
+    <ul>
+      <li><strong>Google STUN Servers</strong> (stun.l.google.com) - Standard WebRTC infrastructure for establishing peer-to-peer connections. No data is logged by us.</li>
+      <li><strong>Render.com</strong> - Hosting provider for our signaling server. They may have their own logging policies for server infrastructure.</li>
+    </ul>
+    <p>We do NOT use:</p>
+    <ul>
+      <li>Google Analytics or any analytics services</li>
+      <li>Advertising networks</li>
+      <li>Social media tracking pixels</li>
+      <li>Any third-party data collection tools</li>
+    </ul>
+
+    <h2>7. Browser Permissions Explained</h2>
+    <p>Our extension requests the following Chrome permissions:</p>
+    <ul>
+      <li><strong>activeTab:</strong> To detect which cryptocurrency token page you're currently viewing</li>
+      <li><strong>storage:</strong> To save your voice mode preference (Always On vs Push-to-Talk) locally in your browser</li>
+      <li><strong>tabs:</strong> To open the voice chat interface in a new tab when you click the extension</li>
+      <li><strong>host_permissions:</strong> To work on DexScreener, Axiom.trade, and GMGN websites</li>
+    </ul>
+    <p>These permissions are used solely for the extension's functionality and not for data collection.</p>
+
+    <h2>8. Data Security</h2>
+    <p>Even though we don't collect personal data, we take security seriously:</p>
+    <ul>
+      <li>Voice communication uses encrypted WebRTC connections</li>
+      <li>Server connections use WSS (WebSocket Secure) protocol</li>
+      <li>No data is stored in databases</li>
+      <li>No logs are kept beyond temporary server infrastructure logs</li>
+    </ul>
+
+    <h2>9. Children's Privacy</h2>
+    <p>This extension is not intended for use by children under 13 years of age. We do not knowingly collect information from children. If you believe a child has used this extension, please contact us.</p>
+
+    <h2>10. Your Rights and Choices</h2>
+    <p>You have complete control over your privacy:</p>
+    <ul>
+      <li>You can stop using the extension at any time</li>
+      <li>You can revoke microphone permissions in Chrome settings (chrome://settings/content/microphone)</li>
+      <li>You can uninstall the extension to remove all local data</li>
+      <li>You can choose not to join voice chats</li>
+    </ul>
+
+    <h2>11. Data Retention</h2>
+    <p>We do not retain any user data. All temporary connection data is deleted when you:</p>
+    <ul>
+      <li>Leave the voice chat</li>
+      <li>Close the browser tab</li>
+      <li>Disconnect from the internet</li>
+    </ul>
+
+    <h2>12. International Users</h2>
+    <p>This extension can be used globally. Since we don't collect personal data, international data transfer regulations (like GDPR) don't apply. However, we respect all users' privacy regardless of location.</p>
+
+    <h2>13. Changes to This Privacy Policy</h2>
+    <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>14. Open Source</h2>
+    <p>Our extension code is transparent. You can review how it works and verify our privacy practices.</p>
+
+    <div class="contact">
+      <h2 style="margin-top: 0; border: none; padding: 0;">15. Contact Us</h2>
+      <p>If you have any questions about this privacy policy or our privacy practices, please contact us at:</p>
+      <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+      <p><strong>Extension Support:</strong> Via Chrome Web Store support tab</p>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
+    
+    <p style="text-align: center; color: #666; font-size: 14px;">
+      This privacy policy is effective as of December 27, 2024
+    </p>
+  </div>
+</body>
+</html>
+```
+
+4. **Important:** Replace `your-email@example.com` with your actual contact email
+
+5. Click **"Commit new file"** (green button at bottom)
+
+---
+
+### **Step 4: Enable GitHub Pages**
+
+1. In your repository, click **"Settings"** (top menu)
+
+2. Scroll down in the left sidebar and click **"Pages"**
+
+3. Under "Build and deployment":
+   - **Source**: Deploy from a branch
+   - **Branch**: Select `main` (or `master`)
+   - **Folder**: Select `/ (root)`
+
+4. Click **"Save"**
+
+5. Wait 1-2 minutes for deployment
+
+6. Refresh the page and you'll see: 
+```
+   Your site is live at https://yourusername.github.io/memecoin-voice-privacy/
+```
+
+---
+
+### **Step 5: Get Your Privacy Policy URL**
+
+Your privacy policy URL will be:
+```
+https://YOUR-GITHUB-USERNAME.github.io/memecoin-voice-privacy/privacy-policy.html
+```
+
+**Example:**
+If your GitHub username is `cryptotrader123`, your URL is:
+```
+https://cryptotrader123.github.io/memecoin-voice-privacy/privacy-policy.html
+```
+
+---
+
+### **Step 6: Test It**
+
+1. Copy your privacy policy URL
+2. Paste it in your browser
+3. Verify it loads correctly
+4. Check that your email is correct
+
+---
+
+### **Step 7: Use This URL for Chrome Web Store**
+
+When submitting your extension, paste this URL in the **"Privacy Policy"** field:
+```
+https://YOUR-GITHUB-USERNAME.github.io/memecoin-voice-privacy/privacy-policy.html
