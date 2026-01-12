@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Memecoin Voice Chat</title>
+  <title>Privacy Policy - Echo Voice Chat</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -67,16 +67,16 @@
 <body>
   <div class="container">
     <h1>Privacy Policy</h1>
-    <div class="updated"><strong>Last updated:</strong> December 27, 2024</div>
+    <div class="updated"><strong>Last updated:</strong> January 13, 2025</div>
 
     <h2>1. Introduction</h2>
-    <p>Memecoin Voice Chat ("we," "our," or "the extension") is a Chrome browser extension that enables real-time voice communication between users viewing the same cryptocurrency token. We are committed to protecting your privacy and being transparent about our data practices.</p>
+    <p>Echo Voice Chat ("we," "our," or "the extension") is a Chrome browser extension that enables real-time voice communication between traders viewing the same cryptocurrency token on Axiom.trade. We are committed to protecting your privacy and being transparent about our data practices.</p>
 
     <h2>2. Information We DO NOT Collect</h2>
     <p>We want to be crystal clear: <strong>we do not collect, store, or share any personal information.</strong> Specifically:</p>
     <ul>
       <li>We do NOT collect your name, email address, or any identifying information</li>
-      <li>We do NOT track your browsing history or activity</li>
+      <li>We do NOT track your browsing history or activity beyond the current token page</li>
       <li>We do NOT log your voice conversations</li>
       <li>We do NOT record or store any audio</li>
       <li>We do NOT use cookies or analytics</li>
@@ -86,35 +86,47 @@
     <h2>3. How the Extension Works</h2>
     <p>Our extension operates on a peer-to-peer basis:</p>
     <ul>
-      <li><strong>Random Username Generation:</strong> When you join, a random username like "Trader 1234" is generated locally in your browser. This is never stored on our servers.</li>
-      <li><strong>Token Detection:</strong> The extension detects which cryptocurrency token page you're viewing by reading the URL. This information stays in your browser.</li>
+      <li><strong>Guest Username Generation:</strong> When you join as a guest, a random username like "Bull1234" is generated and stored locally in your browser using localStorage. This is never stored on our servers.</li>
+      <li><strong>Token Detection:</strong> The extension detects which cryptocurrency token page you're viewing on Axiom.trade by reading the URL. This information is used only to match you with other traders viewing the same token.</li>
       <li><strong>Peer-to-Peer Voice:</strong> Voice communication happens directly between users using WebRTC technology. Audio never passes through our servers.</li>
-      <li><strong>Signaling Server:</strong> Our server only facilitates the initial connection setup between users. Once connected, users communicate directly.</li>
+      <li><strong>Signaling Server:</strong> Our server only facilitates the initial connection setup between users. Once connected, users communicate directly peer-to-peer.</li>
     </ul>
 
-    <h2>4. Microphone Access</h2>
-    <p>The extension requests microphone access only when you explicitly click "Join Voice Chat." Your microphone is used solely for real-time voice communication and is controlled by you at all times:</p>
+    <h2>4. Local Data Storage</h2>
+    <p>The extension stores the following data locally in your browser using localStorage:</p>
     <ul>
-      <li>You can choose "Always On" or "Push-to-Talk" mode</li>
+      <li>Your guest username (e.g., "Bull1234")</li>
+      <li>Your avatar URL (generated via dicebear.com)</li>
+      <li>Your push-to-talk key preference (default: Spacebar)</li>
+    </ul>
+    <p><strong>This data never leaves your browser and is not transmitted to our servers.</strong> You can clear this data by uninstalling the extension or clearing your browser data.</p>
+
+    <h2>5. Microphone Access</h2>
+    <p>The extension requests microphone access only when you explicitly join a voice chat. Your microphone is used solely for real-time voice communication and is controlled by you at all times:</p>
+    <ul>
+      <li>You use "Push-to-Talk" mode (hold spacebar or your custom key to speak)</li>
       <li>You can leave the chat at any time</li>
       <li>No audio is ever recorded or stored</li>
       <li>You can revoke microphone permissions in Chrome settings</li>
+      <li>Your microphone is muted by default until you press your push-to-talk key</li>
     </ul>
 
-    <h2>5. Temporary Server Data</h2>
+    <h2>6. Temporary Server Data</h2>
     <p>Our signaling server temporarily stores minimal data to facilitate connections:</p>
     <ul>
       <li><strong>Random User ID:</strong> A randomly generated identifier (e.g., "user_abc123") used only for the duration of your chat session</li>
-      <li><strong>Token Address:</strong> The cryptocurrency token you're viewing, used to match you with other users viewing the same token</li>
+      <li><strong>Token Address:</strong> The cryptocurrency token you're viewing on Axiom.trade, used to match you with other traders viewing the same token</li>
       <li><strong>WebSocket Connection:</strong> A temporary network connection that exists only while you're in the chat</li>
+      <li><strong>Guest Username:</strong> Your randomly generated username (e.g., "Bull1234") transmitted to other users in the same voice room</li>
     </ul>
     <p><strong>All of this data is deleted immediately when you leave the chat or close your browser.</strong></p>
 
-    <h2>6. Third-Party Services</h2>
+    <h2>7. Third-Party Services</h2>
     <p>We use the following third-party infrastructure:</p>
     <ul>
       <li><strong>Google STUN Servers</strong> (stun.l.google.com) - Standard WebRTC infrastructure for establishing peer-to-peer connections. No data is logged by us.</li>
-      <li><strong>Render.com</strong> - Hosting provider for our signaling server. They may have their own logging policies for server infrastructure.</li>
+      <li><strong>Render.com</strong> - Hosting provider for our WebSocket signaling server (memecoin-voice-server.onrender.com). They may have their own logging policies for server infrastructure.</li>
+      <li><strong>Dicebear.com</strong> - Avatar generation service. Avatar URLs are generated based on your user ID and stored locally in your browser.</li>
     </ul>
     <p>We do NOT use:</p>
     <ul>
@@ -124,56 +136,57 @@
       <li>Any third-party data collection tools</li>
     </ul>
 
-    <h2>7. Browser Permissions Explained</h2>
+    <h2>8. Browser Permissions Explained</h2>
     <p>Our extension requests the following Chrome permissions:</p>
     <ul>
-      <li><strong>activeTab:</strong> To detect which cryptocurrency token page you're currently viewing</li>
-      <li><strong>storage:</strong> To save your voice mode preference (Always On vs Push-to-Talk) locally in your browser</li>
-      <li><strong>tabs:</strong> To open the voice chat interface in a new tab when you click the extension</li>
-      <li><strong>host_permissions:</strong> To work on DexScreener, Axiom.trade, and GMGN websites</li>
+      <li><strong>host_permissions (axiom.trade):</strong> To inject the voice chat interface on Axiom.trade pages and detect which token you're currently viewing</li>
     </ul>
-    <p>These permissions are used solely for the extension's functionality and not for data collection.</p>
+    <p>We previously requested "storage" and "activeTab" permissions but have removed them as they are not needed. The extension uses built-in browser localStorage instead.</p>
 
-    <h2>8. Data Security</h2>
+    <h2>9. Data Security</h2>
     <p>Even though we don't collect personal data, we take security seriously:</p>
     <ul>
-      <li>Voice communication uses encrypted WebRTC connections</li>
+      <li>Voice communication uses encrypted WebRTC peer-to-peer connections</li>
       <li>Server connections use WSS (WebSocket Secure) protocol</li>
       <li>No data is stored in databases</li>
       <li>No logs are kept beyond temporary server infrastructure logs</li>
+      <li>All code is bundled in the extension - no remote code execution</li>
     </ul>
 
-    <h2>9. Children's Privacy</h2>
+    <h2>10. Children's Privacy</h2>
     <p>This extension is not intended for use by children under 13 years of age. We do not knowingly collect information from children. If you believe a child has used this extension, please contact us.</p>
 
-    <h2>10. Your Rights and Choices</h2>
+    <h2>11. Your Rights and Choices</h2>
     <p>You have complete control over your privacy:</p>
     <ul>
       <li>You can stop using the extension at any time</li>
       <li>You can revoke microphone permissions in Chrome settings (chrome://settings/content/microphone)</li>
       <li>You can uninstall the extension to remove all local data</li>
       <li>You can choose not to join voice chats</li>
+      <li>You can clear localStorage data through Chrome settings</li>
     </ul>
 
-    <h2>11. Data Retention</h2>
+    <h2>12. Data Retention</h2>
     <p>We do not retain any user data. All temporary connection data is deleted when you:</p>
     <ul>
       <li>Leave the voice chat</li>
       <li>Close the browser tab</li>
       <li>Disconnect from the internet</li>
+      <li>Navigate away from the token page</li>
     </ul>
+    <p>Local data stored in your browser (username, avatar, preferences) persists until you clear browser data or uninstall the extension.</p>
 
-    <h2>12. International Users</h2>
+    <h2>13. International Users</h2>
     <p>This extension can be used globally. Since we don't collect personal data, international data transfer regulations (like GDPR) don't apply. However, we respect all users' privacy regardless of location.</p>
 
-    <h2>13. Changes to This Privacy Policy</h2>
+    <h2>14. Changes to This Privacy Policy</h2>
     <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
 
-    <h2>14. Open Source</h2>
-    <p>Our extension code is transparent. You can review how it works and verify our privacy practices.</p>
+    <h2>15. Supported Platforms</h2>
+    <p>Echo Voice Chat currently works exclusively on Axiom.trade. We may expand to other trading platforms in the future, and this privacy policy will be updated accordingly.</p>
 
     <div class="contact">
-      <h2 style="margin-top: 0; border: none; padding: 0;">15. Contact Us</h2>
+      <h2 style="margin-top: 0; border: none; padding: 0;">16. Contact Us</h2>
       <p>If you have any questions about this privacy policy or our privacy practices, please contact us at:</p>
       <p><strong>Email:</strong> <a href="mailto:staprflw@gmail.com">staprflw@gmail.com</a></p>
       <p><strong>Extension Support:</strong> Via Chrome Web Store support tab</p>
@@ -182,7 +195,7 @@
     <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
     
     <p style="text-align: center; color: #666; font-size: 14px;">
-      This privacy policy is effective as of December 27, 2024
+      This privacy policy is effective as of January 13, 2025
     </p>
   </div>
 </body>
